@@ -1,6 +1,8 @@
 import './style.css';
 
-document.body.innerHTML = `  
+const container = document.getElementById('container');
+
+container.innerHTML = `  
 <header>
 <h1>Leaderboard</h1>
 </header>
