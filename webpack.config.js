@@ -5,12 +5,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: '/dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'development',
       template: './src/index.html',
     }),
   ],
