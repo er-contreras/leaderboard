@@ -1,6 +1,7 @@
 import './style.css';
 
-document.body.innerHTML = `  <header>
+document.body.innerHTML = `  
+<header>
 <h1>Leaderboard</h1>
 </header>
 
