@@ -61,7 +61,7 @@ const htmlContent = () => {
     names.textContent = `${obj.name}: ${obj.score}`;
     scores.appendChild(names);
 
-    i % 2 === 0 ? names.classList.add('names') : names.classList.add('names2');
+    return i % 2 === 0 ? names.classList.add('names') : names.classList.add('names2');
   });
 
   // Section 2
@@ -120,6 +120,6 @@ const htmlContent = () => {
   form.appendChild(inputScore);
   form.appendChild(containerSubmitBtn);
   containerSubmitBtn.appendChild(submitBtn);
-}
+};
 
 htmlContent();
