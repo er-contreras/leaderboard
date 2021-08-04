@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 2rem;
+}
+
+header {
+  margin: 2rem 0 0 0;
+  font-size: 2rem;
+}
+
+main,
+form,
+#scores-title,
+#add-score,
+#submit-container {
+  display: flex;
+}
+
+main {
+  justify-content: space-evenly;
+  margin: 4rem 0 0 0;
+}
+
+#recent-scores {
+  min-width: 22rem;
+}
+
+#scores-title {
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+
+#scores {
+  border: 2px solid black;
+  margin: 2rem 0 0 0;
+}
+
+#add-score h2 {
+  font-size: 2rem;
+}
+
+form,
+#add-score {
+  flex-direction: column;
+}
+
+input {
+  margin: 2rem 0 0 0;
+}
+
+.names,
+.names2 {
+  font-size: 1.5rem;
+}
+
+.names2 {
+  background-color: hsl(0, 0%, 86%);
+}
+
+#submit-container {
+  justify-content: flex-end;
+}
