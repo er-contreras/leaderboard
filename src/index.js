@@ -29,7 +29,7 @@ const arrOfObjs = [
     name: 'Name',
     score: '42',
   },
-]
+];
 
 function htmlContent() {
   const container = document.getElementById('container');
@@ -41,7 +41,7 @@ function htmlContent() {
 
   header.appendChild(header1);
 
-  // Main 
+  // Main
   const main = document.createElement('main');
 
   // Section 1
@@ -93,7 +93,7 @@ function htmlContent() {
   inputName.setAttribute('type', 'text');
   inputName.setAttribute('name', 'name');
   inputName.id = 'name';
-  inputName.setAttribute("required", "");
+  inputName.setAttribute('required', '');
 
   const labelScore = document.createElement('label');
   labelName.setAttribute('for', 'score');
@@ -102,7 +102,7 @@ function htmlContent() {
   inputScore.setAttribute('type', 'text');
   inputScore.setAttribute('name', 'score');
   inputScore.id = 'score';
-  inputScore.setAttribute("required", "");
+  inputScore.setAttribute('required', '');
 
   const containerSubmitBtn = document.createElement('div');
   containerSubmitBtn.id = 'submit-container';
@@ -111,7 +111,7 @@ function htmlContent() {
   submitBtn.setAttribute('type', 'submit');
   submitBtn.id = 'submit';
 
-  //container appendChilds
+  // container appendChilds
   container.appendChild(header);
   container.appendChild(main);
   // main appendChild
@@ -123,7 +123,7 @@ function htmlContent() {
   scoresTitle.appendChild(scoresTitleBtn);
   // Section 1 scores appendChild
   section1.appendChild(scores);
-  // Section 2 
+  // Section 2
   section2.appendChild(addYourScore);
   section2.appendChild(form);
   form.appendChild(labelName);
