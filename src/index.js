@@ -31,7 +31,7 @@ const arrOfObjs = [
   },
 ];
 
-function htmlContent() {
+const htmlContent = () => {
   const container = document.getElementById('container');
 
   // Main
@@ -61,11 +61,7 @@ function htmlContent() {
     names.textContent = `${obj.name}: ${obj.score}`;
     scores.appendChild(names);
 
-    if (i % 2 === 0) {
-      names.classList.add('names');
-    } else {
-      names.classList.add('names2');
-    }
+    i % 2 === 0 ? names.classList.add('names') : names.classList.add('names2');
   });
 
   // Section 2
