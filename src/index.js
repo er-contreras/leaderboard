@@ -81,6 +81,7 @@ const htmlContent = () => {
   const inputName = document.createElement('input');
   inputName.setAttribute('type', 'text');
   inputName.setAttribute('name', 'name');
+  inputName.setAttribute('placeholder', 'Your Name');
   inputName.id = 'name';
   inputName.setAttribute('required', '');
 
@@ -90,6 +91,7 @@ const htmlContent = () => {
   const inputScore = document.createElement('input');
   inputScore.setAttribute('type', 'text');
   inputScore.setAttribute('name', 'score');
+  inputScore.setAttribute('placeholder', 'Your Score');
   inputScore.id = 'score';
   inputScore.setAttribute('required', '');
 
