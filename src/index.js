@@ -34,13 +34,6 @@ const arrOfObjs = [
 function htmlContent() {
   const container = document.getElementById('container');
 
-  // Header
-  const header = document.createElement('header');
-  const header1 = document.createElement('h1');
-  header1.textContent = 'Leaderboard';
-
-  header.appendChild(header1);
-
   // Main
   const main = document.createElement('main');
 
@@ -112,7 +105,6 @@ function htmlContent() {
   submitBtn.id = 'submit';
 
   // container appendChilds
-  container.appendChild(header);
   container.appendChild(main);
   // main appendChild
   main.appendChild(section1);
