@@ -1,14 +1,38 @@
 import './style.css';
-import { postGame } from './api.js';
-import { apiContent } from './api.js';
-import htmlContent from './htmlContent.js'
-import addScores from './form';
+import postGame from './api.js';
+// import { apiContent } from './api.js';
+import htmlContent from './htmlContent.js';
+import addScores from './form.js';
 
+// Create HTML Content
 htmlContent();
 
+// Call
 addScores();
 
 postGame();
 
-apiContent();
+const apiContent = async () => {
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/9iMIGy5DL3lZvglxeZQW/scores/';
 
+  const response = await fetch(url);
+  const apiScores = await response.json();
+  const almost = apiScores.result;
+  almost.sort((a, b) => a - b);
+
+  const refresh = document.getElementById('refresh');
+
+  refresh.addEventListener('click', () => {
+    almost.map((obj, i) => {
+      const scores = document.getElementById('scores');
+      const names = document.createElement('div');
+
+      names.textContent = `${obj.user}: ${obj.score}`;
+      scores.appendChild(names);
+
+      return i % 2 === 0 ? names.classList.add('names') : names.classList.add('names2');
+    });
+  });
+};
+
+apiContent();

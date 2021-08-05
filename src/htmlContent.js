@@ -1,5 +1,3 @@
-import arrOfObjs from "./arrOfObjs";
-
 const htmlContent = () => {
   const container = document.getElementById('container');
   // Main
@@ -21,15 +19,6 @@ const htmlContent = () => {
   // scores Div
   const scores = document.createElement('div');
   scores.id = 'scores';
-
-  arrOfObjs.forEach((obj, i) => {
-    const names = document.createElement('div');
-
-    names.textContent = `${obj.name}: ${obj.score}`;
-    scores.appendChild(names);
-
-    return i % 2 === 0 ? names.classList.add('names') : names.classList.add('names2');
-  });
   // Section 2
   const section2 = document.createElement('section');
   section2.id = 'add-score';

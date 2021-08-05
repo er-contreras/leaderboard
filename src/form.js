@@ -1,9 +1,7 @@
 const addScores = () => {
   const form = document.getElementById('form');
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
+  form.addEventListener('submit', () => {
     const name = document.getElementById('name').value;
     const score = document.getElementById('score').value;
 
@@ -16,14 +14,12 @@ const addScores = () => {
         score: parseInt(score, 10),
       }),
       headers: {
-        'Content-Type': 'application/json; charset=UTF-8'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-      })
-  })
-}
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+    }).then((response) => response.json()).then((data) => data);
+
+    window.location.reload();
+  });
+};
 
 export default addScores;
