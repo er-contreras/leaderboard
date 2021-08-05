@@ -18,7 +18,7 @@ const apiContent = async () => {
   const response = await fetch(url);
   const apiScores = await response.json();
   const almost = apiScores.result;
-  almost.sort((a, b) => a - b);
+  almost.sort((a, b) => b.score - a.score);
 
   const refresh = document.getElementById('refresh');
 
