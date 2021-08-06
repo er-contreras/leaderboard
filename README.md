@@ -1,9 +1,9 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portfolio-setup-and-mobile-version-skeleton
+# Leaderboard
 
-> This is about using figma to built our mobile project.
+> This is about consuming an API.
 
 <div align="center"><img src="./images/leaderboard.png" width="300"/></div>
 

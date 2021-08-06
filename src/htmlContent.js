@@ -28,8 +28,6 @@ const htmlContent = () => {
   // Form
   const form = document.createElement('form');
   form.id = 'form';
-  // form.setAttribute('action', 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/9iMIGy5DL3lZvglxeZQW/scores/');
-  // form.setAttribute('method', 'POST');
 
   const labelName = document.createElement('label');
   labelName.setAttribute('for', 'name');

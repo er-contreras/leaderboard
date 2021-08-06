@@ -10,7 +10,7 @@ htmlContent();
 // Call
 addScores();
 
-postGame();
+// postGame();
 
 const apiContent = async () => {
   const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/9iMIGy5DL3lZvglxeZQW/scores/';
@@ -23,8 +23,9 @@ const apiContent = async () => {
   const refresh = document.getElementById('refresh');
 
   refresh.addEventListener('click', () => {
+    const scores = document.getElementById('scores');
+    scores.innerHTML = '';
     almost.map((obj, i) => {
-      const scores = document.getElementById('scores');
       const names = document.createElement('div');
 
       names.textContent = `${obj.user}: ${obj.score}`;
