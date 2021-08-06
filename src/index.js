@@ -37,3 +37,14 @@ const apiContent = async () => {
 };
 
 apiContent();
+
+// Title
+let title = document.getElementById('title').textContent;
+
+let empty = '';
+for(let i of title) {
+  empty += "<span class = 'x'>" + i + "</span>"; 
+};
+
+document.getElementById('title').innerHTML = empty;
+console.log(title)

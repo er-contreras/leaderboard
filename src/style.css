@@ -27,8 +27,12 @@ form,
 }
 
 main {
+  border: 1px solid black;
   justify-content: space-evenly;
   margin: 4rem 0 0 0;
+  padding: 3rem 1rem;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 0.5rem 0.5rem 10rem 8rem rgb(0, 0, 0);
 }
 
 #recent-scores {
@@ -70,4 +74,12 @@ input {
 
 #submit-container {
   justify-content: flex-end;
+}
+
+.x {
+  cursor: pointer;
+}
+
+.x:hover {
+  color: hsl(33, 100%, 50%);
 }
