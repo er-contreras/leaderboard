@@ -11,10 +11,11 @@ html {
 body {
   min-height: 100vh;
   margin: 2rem;
+  background-color: orange;
 }
 
 header {
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 0 2rem;
   font-size: 2rem;
 }
 
@@ -27,8 +28,12 @@ form,
 }
 
 main {
+  border: 1px solid black;
   justify-content: space-evenly;
   margin: 4rem 0 0 0;
+  padding: 3rem 1rem;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(0, 0, 0);
 }
 
 #recent-scores {
@@ -59,6 +64,10 @@ input {
   margin: 2rem 0 0 0;
 }
 
+.names {
+  background-color: white;
+}
+
 .names,
 .names2 {
   font-size: 1.5rem;
@@ -70,4 +79,49 @@ input {
 
 #submit-container {
   justify-content: flex-end;
+}
+
+.x {
+  cursor: pointer;
+}
+
+.x:hover {
+  color: hsl(0, 100%, 50%);
+  font-size: 5rem;
+}
+
+#submit:hover {
+  color: red;
+  font-size: 1.5rem;
+}
+
+/* className for the trail elements */
+.trail {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  background: rgb(205, 1, 1);
+  pointer-events: none;
+}
+
+/* Beating button */
+#refresh {
+  text-transform: uppercase;
+  animation: pulse 1.2s infinite;
+  color: red;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
 }

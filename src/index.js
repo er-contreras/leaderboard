@@ -1,16 +1,14 @@
 import './style.css';
-import postGame from './api.js';
-// import { apiContent } from './api.js';
 import htmlContent from './htmlContent.js';
 import addScores from './form.js';
-
+import animatedTrail from './trail.js';
 // Create HTML Content
 htmlContent();
 
 // Call
 addScores();
 
-postGame();
+// postGame();
 
 const apiContent = async () => {
   const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/9iMIGy5DL3lZvglxeZQW/scores/';
@@ -23,8 +21,9 @@ const apiContent = async () => {
   const refresh = document.getElementById('refresh');
 
   refresh.addEventListener('click', () => {
+    const scores = document.getElementById('scores');
+    scores.innerHTML = '';
     almost.map((obj, i) => {
-      const scores = document.getElementById('scores');
       const names = document.createElement('div');
 
       names.textContent = `${obj.user}: ${obj.score}`;
@@ -36,3 +35,16 @@ const apiContent = async () => {
 };
 
 apiContent();
+
+// Title
+const title = document.getElementById('title').textContent;
+
+let empty = '';
+for (const i of title) { /* eslint-disable-line */
+  empty += `<span class = 'x'>${i}</span>`;
+}
+
+document.getElementById('title').innerHTML = empty;
+
+// Trails
+animatedTrail();
