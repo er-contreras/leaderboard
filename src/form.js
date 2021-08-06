@@ -16,7 +16,7 @@ const addScores = () => {
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
       },
-    }).then((response) => response.json()).then((data) => console.log(data));
+    }).then((response) => response.json()).then((data) => data);
 
     window.location.reload();
   });

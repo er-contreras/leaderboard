@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 0 2rem;
   font-size: 2rem;
 }
 
@@ -32,7 +32,7 @@ main {
   margin: 4rem 0 0 0;
   padding: 3rem 1rem;
   background-color: rgb(242, 242, 242);
-  box-shadow: 0.5rem 0.5rem 10rem 8rem rgb(0, 0, 0);
+  box-shadow: 0.5rem 0.5rem 10rem 1rem rgb(0, 0, 0);
 }
 
 #recent-scores {
@@ -81,5 +81,21 @@ input {
 }
 
 .x:hover {
-  color: hsl(33, 100%, 50%);
+  color: hsl(0, 100%, 50%);
+  font-size: 5rem;
+}
+
+#refresh:hover,
+#submit:hover {
+  color: red;
+}
+
+/* className for the trail elements */
+.trail {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  background: rgb(205, 1, 1);
+  pointer-events: none;
 }

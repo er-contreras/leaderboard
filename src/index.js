@@ -1,9 +1,7 @@
 import './style.css';
-import postGame from './api.js';
-// import { apiContent } from './api.js';
 import htmlContent from './htmlContent.js';
 import addScores from './form.js';
-
+import animatedTrail from './trail.js';
 // Create HTML Content
 htmlContent();
 
@@ -39,12 +37,14 @@ const apiContent = async () => {
 apiContent();
 
 // Title
-let title = document.getElementById('title').textContent;
+const title = document.getElementById('title').textContent;
 
 let empty = '';
-for(let i of title) {
-  empty += "<span class = 'x'>" + i + "</span>"; 
-};
+for (const i of title) { /* eslint-disable-line */
+  empty += `<span class = 'x'>${i}</span>`;
+}
 
 document.getElementById('title').innerHTML = empty;
-console.log(title)
+
+// Trails
+animatedTrail();
