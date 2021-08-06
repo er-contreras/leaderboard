@@ -32,7 +32,7 @@ main {
   margin: 4rem 0 0 0;
   padding: 3rem 1rem;
   background-color: rgb(242, 242, 242);
-  box-shadow: 0.5rem 0.5rem 10rem 1rem rgb(0, 0, 0);
+  box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgb(0, 0, 0);
 }
 
 #recent-scores {
@@ -63,6 +63,10 @@ input {
   margin: 2rem 0 0 0;
 }
 
+.names {
+  background-color: white;
+}
+
 .names,
 .names2 {
   font-size: 1.5rem;
@@ -85,9 +89,9 @@ input {
   font-size: 5rem;
 }
 
-#refresh:hover,
 #submit:hover {
   color: red;
+  font-size: 1.5rem;
 }
 
 /* className for the trail elements */
@@ -98,4 +102,25 @@ input {
   border-radius: 3px;
   background: rgb(205, 1, 1);
   pointer-events: none;
+}
+
+/* Beating button */
+#refresh {
+  text-transform: uppercase;
+  animation: pulse 1.5s infinite;
+  color: red;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+  }
+    100% {
+    transform: scale(.9);
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
 }
