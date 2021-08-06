@@ -41,6 +41,7 @@ main {
 }
 
 #scores {
+  padding: 0.2rem;
   border: 2px solid black;
   margin: 2rem 0 0 0;
 }

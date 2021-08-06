@@ -5,7 +5,7 @@
 
 > This is about using figma to built our mobile project.
 
-<div align="center"><img src="./src/leaderboard.png" width="300"/></div>
+<div align="center"><img src="./images/leaderboard.png" width="300"/></div>
 
 Mobile ScreenShots
 
